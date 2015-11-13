@@ -12,3 +12,6 @@
 	smudge = git lfs smudge %f
 	required = true
 [user]
+[user]
+	name = Sangwon Yang
+	email = sangwon.yang@gmail.com
