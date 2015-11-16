@@ -10,6 +10,9 @@ DOTFILES_HOME=$HOME
 DOTFILES_IGNORE=$(<dotignore)
 LOCALHOST_VAR="${DOTFILES_LOCAL}/.ansible/host_vars/localhost"
 
+ARG1=$1
+ARG2=$2
+
 function bootstrap() {
   # Ask for the administrator password upfront.
   if [ "$(whoami)" != "root" ]; then
@@ -19,17 +22,26 @@ function bootstrap() {
     while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
   fi
 
-  echo "Updating OS X. If this requires a restart, run the script again."
-  sudo softwareupdate -iva
+  if [ "$ARG1" != '--no-update' -a "$ARG2" != '--no-update' ]; then
+    echo "Updating OS X. If this requires a restart, run the script again."
+    sudo softwareupdate -iva
 
-  echo "Installing Xcode Command Line Tools."
-  xcode-select --install
+    if ! xcode-select -p > /dev/null ; then
+      echo "Installing Xcode Command Line Tools."
+      xcode-select --install
+      while ! xcode-select -p > /dev/null ; do sleep 1; done
+      sudo xcodebuild -license
+    fi
+  fi;
 
   # Check for Homebrew and install if we don't have it.
   if [[ $(which brew) != ${BREW_DIR}* ]]; then
-    if [ -z $(which brew) ]; then
+    if [ $(which brew) ]; then
       echo "Uninstalling the existing Homebrew."
-      sudo ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+      curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall > uninstall
+      chmod 755 uninstall
+      ./uninstall --path=$(dirname $(dirname $(which brew))) --force
+      rm -f uninstall
     fi
     echo "Installing Homebrew."
     sudo mkdir -p ${BREW_DIR}
@@ -68,7 +80,7 @@ EOF
   echo 'Now you can run the playbook by executing the script: `./update.sh`'
 }
 
-if [ "$1" == '-f' -o "$1" == '--force' ]; then
+if [ "$ARG1" == '-f' -o "$ARG1" == '--force' -o "$ARG2" == '-f' -o "$ARG2" == '--force' ]; then
   bootstrap
 else
   read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
@@ -79,4 +91,4 @@ else
   fi;
 fi;
 
-unset bootstrap
+unset ARG1 ARG2 bootstrap

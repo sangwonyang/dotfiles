@@ -1,5 +1,7 @@
 # Tipplr dotfiles
 
+[![Build Status](http://img.shields.io/travis/tipplrio/dotfiles.svg?style=flat)](https://travis-ci.org/tipplrio/dotfiles)
+
 This is a repository for dotfiles used in Tipplr's development environment. There is an [Ansible](http://www.ansible.com/) playbook for setting up the development environment on **OS X**.
 
 
@@ -25,7 +27,8 @@ $ git clone git@github.com:tipplrio/dotfiles.git
 ```shell
 # Just execute the bootstrapping script in the local repository.
 $ cd ~/Workspace/dotfiles
-$ source ./bootstrap.sh
+$ ./bootstrap.sh
+$ export PATH=/opt/homebrew/bin:$PATH
 ```
 
 ## Making your environment up-to-date
