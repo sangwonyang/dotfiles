@@ -6,7 +6,10 @@
     showIndentGuide: true
     tabType: "soft"
     lineHeight: 1.2
+    fontSize: 13
     fontFamily: "D2Coding"
+    softWrapAtPreferredLineLength: true
+    showInvisibles: true
     scrollPastEnd: true
     softWrap: true
   core:
@@ -22,10 +25,15 @@
   marked: {}
   "file-icons":
     onChanges: true
+    coloured: false
     forceShow: true
   "git-plus": {}
   "atom-alignment": {}
   minimap: {}
   "exception-reporting":
     userId: "b3121ba2-5ce0-2fda-4539-61a8f93b5437"
+  linter:
+    errorPanelHeight: 22
+  "linter-eslint":
   "autocomplete-plus": {}
+    globalNodePath: "/opt/homebrew"

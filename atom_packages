@@ -13,3 +13,8 @@ atom-material-ui
 colorblind-syntax
 merge-conflicts
 native-ui
+linter
+linter-eslint
+language-babel
+es6-javascript
+gulp-control
