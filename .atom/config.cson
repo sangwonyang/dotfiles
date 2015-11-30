@@ -6,16 +6,13 @@
     showIndentGuide: true
     tabType: "soft"
     lineHeight: 1.2
-    fontSize: 13
     fontFamily: "D2Coding"
-    softWrapAtPreferredLineLength: true
-    showInvisibles: true
     scrollPastEnd: true
     softWrap: true
   core:
     themes: [
       "native-ui"
-      "atom-material-syntax"
+      "one-dark-syntax"
     ]
   "markdown-writer":
     fileExtension: ".md"
@@ -25,7 +22,7 @@
   marked: {}
   "file-icons":
     onChanges: true
-    coloured: false
+    coloured: true
     forceShow: true
   "git-plus": {}
   "atom-alignment": {}
