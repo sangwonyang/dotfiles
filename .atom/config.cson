@@ -6,6 +6,7 @@
     showIndentGuide: true
     tabType: "soft"
     lineHeight: 1.2
+    fontSize: 13
     fontFamily: "D2Coding"
     scrollPastEnd: true
     softWrap: true
