@@ -35,5 +35,5 @@
   linter:
     errorPanelHeight: 22
   "linter-eslint":
-  "autocomplete-plus": {}
     globalNodePath: "/opt/homebrew"
+  "autocomplete-plus": {}
