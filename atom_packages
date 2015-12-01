@@ -18,3 +18,5 @@ linter-eslint
 language-babel
 es6-javascript
 gulp-control
+toggle-quotes
+node-debugger
