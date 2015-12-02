@@ -1,6 +1,7 @@
 export PATH="/opt/homebrew/bin:/opt/homebrew-cask/bin:$PATH"
 export MANPATH="/opt/homebrew/share/man:$MANPATH"
 export EDITOR="atom"
+export NVM_DIR=~/.nvm
 
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
@@ -17,3 +18,5 @@ alias ll="ls -al"
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
+source `brew --prefix nvm`/nvm.sh

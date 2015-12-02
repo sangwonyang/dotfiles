@@ -15,6 +15,9 @@
       "native-ui"
       "one-dark-syntax"
     ]
+    packagesWithKeymapsDisabled: [
+      "rst-preview-pandoc"
+    ]
   "markdown-writer":
     fileExtension: ".md"
   "markdown-preview":
@@ -40,3 +43,6 @@
   "toggle-quotes": {}
   "node-debugger":
     nodePath: "/opt/homebrew/bin/node"
+  "rst-preview-pandoc":
+    pandocOpts: "-fmarkdown_github -thtml --webtex"
+    liveUpdate: false
