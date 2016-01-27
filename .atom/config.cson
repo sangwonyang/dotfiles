@@ -6,8 +6,8 @@
       "rst-preview-pandoc"
     ]
     themes: [
-      "native-ui"
-      "one-dark-syntax"
+      "atom-dark-ui"
+      "an-old-hope-syntax"
     ]
   editor:
     fontFamily: "D2Coding"
@@ -27,7 +27,6 @@
   "git-plus": {}
   linter:
     errorPanelHeight: 22
-    showErrorPanel: false
   "linter-eslint":
     globalNodePath: "/opt/homebrew"
     useGlobalEslint: true
