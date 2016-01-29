@@ -6,8 +6,8 @@
       "rst-preview-pandoc"
     ]
     themes: [
-      "one-dark-ui"
-      "atom-dark-syntax"
+      "atom-dark-ui"
+      "an-old-hope-syntax"
     ]
   editor:
     fontFamily: "D2Coding"
@@ -16,7 +16,9 @@
     scrollPastEnd: true
     showIndentGuide: true
     softWrap: true
-    tabType: "soft"  
+    tabType: "soft"
+  "exception-reporting":
+    userId: "c92f5791-7da7-bfd9-e7cf-69b943449c4e"
   "file-icons":
     coloured: false
     forceShow: true
@@ -26,7 +28,9 @@
     errorPanelHeight: 22
     showErrorPanel: false
   "linter-eslint":
+    disableEslintIgnore: true
     globalNodePath: "/opt/homebrew"
+    useGlobalEslint: true
   "markdown-preview":
     liveUpdate: false
     useGitHubStyle: true
