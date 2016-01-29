@@ -1,0 +1,44 @@
+"*":
+  "atom-alignment": {}
+  "autocomplete-plus": {}
+  core:
+    packagesWithKeymapsDisabled: [
+      "rst-preview-pandoc"
+    ]
+    themes: [
+      "one-dark-ui"
+      "atom-dark-syntax"
+    ]
+  editor:
+    fontFamily: "D2Coding"
+    invisibles: {}
+    lineHeight: 1.2
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: true
+    tabType: "soft"  
+  "file-icons":
+    coloured: false
+    forceShow: true
+    onChanges: true
+  "git-plus": {}
+  linter:
+    errorPanelHeight: 22
+    showErrorPanel: false
+  "linter-eslint":
+    globalNodePath: "/opt/homebrew"
+  "markdown-preview":
+    liveUpdate: false
+    useGitHubStyle: true
+  "markdown-writer":
+    fileExtension: ".md"
+  marked: {}
+  minimap: {}
+  "node-debugger":
+    nodePath: "/opt/homebrew/bin/node"
+  "rst-preview-pandoc":
+    liveUpdate: false
+    pandocOpts: "-fmarkdown_github -thtml --webtex"
+  "toggle-quotes": {}
+  welcome:
+    showOnStartup: false
