@@ -31,7 +31,6 @@
   "linter-eslint":
     disableEslintIgnore: true
     globalNodePath: "/opt/homebrew"
-    useGlobalEslint: true
   "markdown-preview":
     liveUpdate: false
     useGitHubStyle: true
@@ -39,6 +38,10 @@
     fileExtension: ".md"
   marked: {}
   minimap: {}
+  motepair:
+    serverAddress: "tipplr-hq"
+    serverPort: 3000
+    userEmail: "sangwon.yang@gmail.com"
   "node-debugger":
     nodePath: "/opt/homebrew/bin/node"
   "rst-preview-pandoc":
