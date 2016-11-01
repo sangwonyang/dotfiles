@@ -23,4 +23,9 @@ rst-preview-pandoc
 set-syntax
 sort-lines
 toggle-quotes
-motepair
+language-cypher
+highlight-selected
+atom-react-native-autocomplete
+ava
+lodash-snippets
+autocomplete-modules

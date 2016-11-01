@@ -1,13 +1,16 @@
 "*":
-  "atom-alignment": {}
+  "aligner-css": {}
+  "aligner-scss": {}
+  "autocomplete-modules":
+    babelPluginModuleAlias: true
   "autocomplete-plus": {}
   core:
     packagesWithKeymapsDisabled: [
       "rst-preview-pandoc"
     ]
     themes: [
-      "seti-ui"
-      "monokai-seti"
+      "atom-dark-ui"
+      "monokai"
     ]
   editor:
     fontFamily: "D2Coding"
@@ -16,37 +19,33 @@
     lineHeight: 1.2
     scrollPastEnd: true
     showIndentGuide: true
-    softWrap: true
+    showInvisibles: true
+    softWrapAtPreferredLineLength: true
     tabType: "soft"
-  "exception-reporting":
-    userId: "c92f5791-7da7-bfd9-e7cf-69b943449c4e"
   "file-icons":
     coloured: false
     forceShow: true
     onChanges: true
   "git-plus": {}
+  "highlight-selected":
+    lightTheme: true
   linter:
     errorPanelHeight: 88
     showErrorPanel: false
   "linter-eslint":
-    disableEslintIgnore: true
     globalNodePath: "/opt/homebrew"
   "markdown-preview":
     liveUpdate: false
     useGitHubStyle: true
   "markdown-writer":
     fileExtension: ".md"
-  marked: {}
   minimap: {}
-  motepair:
-    serverAddress: "tipplr-hq"
-    serverPort: 3000
-    userEmail: "sangwon.yang@gmail.com"
   "node-debugger":
     nodePath: "/opt/homebrew/bin/node"
   "rst-preview-pandoc":
     liveUpdate: false
     pandocOpts: "-fmarkdown_github -thtml --webtex"
   "toggle-quotes": {}
+  "tree-view": {}
   welcome:
     showOnStartup: false
